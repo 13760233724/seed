@@ -1,0 +1,99 @@
+$def with(site_prefix, title)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$title</title>
+<link rel="stylesheet" href="css/all.css" type="text/css"/>
+<style>
+.box {
+    width:640px;
+    margin-left:auto;
+    margin-right:auto; 
+}
+.content {
+    height:180px;
+}
+.title {
+    width:640px;
+    height:30px;
+}
+.caption2 {
+    font:bold 15px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+    color:#2384bc;
+    line-height:25px;
+}
+#tab_1,#tab_2,#tab_3 {
+    display:block;
+    float:left;
+    text-align:center;
+    width:90px;
+    height:25px;
+    margin-top:5px;
+    margin-left:10px;
+}
+.aaa{
+    background-image:url(img/tab_back.gif);
+}
+</style>
+</head>
+
+<body>
+<script language="javascript">
+
+function formSubmit1()
+{
+    var username = document.getElementById('username').value;
+    if (username == '') {
+        alert('请填写用户名');
+        return false;
+    }
+    var newpw = document.getElementById('newpw').value;
+    if (newpw == '') { 
+        alert('请填写密码');
+        return false;
+    }
+    var name = document.getElementById('name').value;
+    if(name == '') {
+        alert('请填写真实姓名');
+        return false;
+    }
+    var confirmpw = document.getElementById('confirmpw').value;
+    if(newpw != confirmpw) {
+        alert('两次密码输入不一致');
+        return false;
+    }
+    document.getElementById("myForm1").submit();
+}
+</script>
+    <div class="box">
+        <div class="title">
+            <a id="tab_1" class="aaa" href="javascript:void(0)"><p class="caption2">新用户注册</p></a>
+        </div>
+    <form name="myForm1" id="myForm1" action="$site_prefix/register" method="post" enctype="multipart/form-data">
+        <div class="content" id="tab_a1" onkeydown= "if(event.keyCode==13) formSubmit1();">
+            <table>
+                <tr>
+                    <td class="row1">用户名&nbsp;：</td>
+                    <td class="row2"><input id="username" class="input" maxlength="" name="username" />
+                </tr>
+                <tr>
+                    <td class="row1">密码&nbsp;：</td>
+                    <td class="row2"><input id="newpw" class="input" type="password" maxlength="" name="newpw" /></td>
+                </tr>
+                <tr>
+                    <td class="row1">确认密码&nbsp;：</td>
+                    <td class="row2"><input id="confirmpw" class="input" type="password" maxlength="" name="confirmpw" /></td>
+                </tr>
+                <tr>
+                    <td class="row1 lastrow">真实姓名&nbsp;：</td>
+                    <td class="row2 lastrow"><input id="name" class="input" maxlength="" name="name" /></td>
+                </tr>
+            </table>
+            <a class="button1" href="#" onclick="formSubmit1();"/><p>注册</p></a>
+            <a class="button2" href="$site_prefix/"/><p>返回</p></a>
+        </div>
+        </form>
+        <img src="img/bottom.gif" />
+</body>
+</html>

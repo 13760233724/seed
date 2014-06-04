@@ -1,0 +1,62 @@
+$def with(site_prefix, title, message, redirect_url, target, redirect_title, center = 0)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$title</title>
+<link rel="stylesheet" href="css/all.css" type="text/css"/>
+<style>
+.box {
+	width:640px;
+    $if center == 1:
+        margin-left:auto;
+        margin-right:auto;
+}
+.point4 {
+	font:bold 18px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+	color:#45718c;
+}
+</style>
+</head>
+
+<body>
+	<div class="box">
+    	<div class="title"><p class="caption">提示信息</p></div>
+        <div class="content">
+            <table width="600px">
+                <tr>
+                    <td class="td1" style="text-align:center;"><p class="point4">$message</p></td>
+                </tr>
+                <tr>
+                    <td class="td1 lastrow" style="text-align:center;">
+                                                <img src="img/loading.gif" style="vertical-align:middle;margin-right:5px;"/>
+                        <span><font color="ff0000" id="second">3</font>秒后将自动跳转至</span>
+                                                <a class="link" href="$site_prefix/$redirect_url" target="$target" >$redirect_title</a></td>
+                                        </tr>
+            </table>
+        </div>
+        <!--<a class="button" href="#" onclick=";"><p>返&nbsp;回</p></a>-->
+    <img src="img/bottom.gif" />
+   </div>
+</body>
+<script type="text/javascript">
+	function redirect(url, time) {
+	    
+        setTimeout('jump2("'+url+'")', time * 1000);
+        setInterval('count_time()',1000);
+	}
+	function jump2(url){
+        $if target == "_parent":
+			window.top.location=url;
+        $else:
+			window.location=url;
+	}
+    function count_time(){
+        var seconds=document.getElementById('second');
+        if(seconds.innerHTML>0)
+        seconds.innerHTML=seconds.innerHTML-1;
+    }
+	redirect('$site_prefix/$redirect_url',3);
+</script>
+</html>
+

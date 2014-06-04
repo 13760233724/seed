@@ -1,0 +1,78 @@
+$def with (site_prefix, title)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$title</title>
+<link href="$site_prefix/css/log_in.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script type="text/javascript">
+function formSubmit() {
+    document.getElementById("myForm1").submit()
+}
+</script>
+<body onkeydown="if (event.keyCode==13) formSubmit();">
+<style type="text/css"> 
+#ie6-warning{z-index:9999;background:#FF0; position:absolute;top:0; left:0;font-size:12px; line-height:24px; color:#F00;padding:0 10px;} 
+#ie6-warning img{float:right; cursor:pointer; margin-top:4px;}
+#ie6-warning a{text-decoration:none;} 
+</style> 
+<!--[if lte IE 6] > 
+ 
+<div id="ie6-warning">
+您正在使用十多年前发布的 Internet Explorer 6 或更低版本的IE浏览器。为更好的浏览本页，建议您将浏览器升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE8</a> 或以下浏览器：<a href="http://www.firefox.com.cn/download/">Firefox</a> / <a href="http://www.google.cn/chrome">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.Opera.com/">Opera</a> 为早日消灭IE6，为社会的进步贡献一份您的力量！
+</div> 
+ 
+<script type="text/javascript"> 
+function closeme()
+{
+   var div = document.getElementById("ie6-warning");
+   div.style.display ="none";
+}
+function position_fixed(el, eltop, elleft){ 
+ 
+// check if this is IE6 
+ 
+if(!window.XMLHttpRequest) 
+ 
+window.onscroll = function(){ 
+ 
+el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+ 
+el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+ 
+} 
+ 
+else el.style.position = "fixed"; 
+ 
+} 
+ 
+position_fixed(document.getElementById("ie6-warning"),0, 0); 
+ 
+</script> 
+<![endif]--> 
+
+<div id="login" class="login">
+    <form id="myForm1" name="myForm1" method="post" action=$site_prefix/login>
+        <img src="$site_prefix/img/top_logo.png" style="margin-left:121px;margin-top:60px;margin-bottom:40px;"/>
+        <div style="margin-bottom:50px;margin-left:378px">
+            <img src="$site_prefix/img/user1.gif" style="float:left;" />
+            <input class="input2" type="text" style="background:url($site_prefix/img/user.gif) no-repeat;" id="username" name="username" tabindex="1" />
+        </div>
+        <p class="point2" style="margin-left:378px;margin-bottom:30px;">请输入用户名</a></p>
+        <div style="margin-bottom:80px;margin-left:378px">
+            <img src="$site_prefix/img/password1.gif" style="float:left;" />
+            <input class="input2" type="password" style="background:url($site_prefix/img/user.gif) no-repeat;" id="pwd" name="pwd" tabindex="2" />
+        </div>
+        <p class="point2" style="margin-left:378px;margin-bottom:30px;">请输入密码</a></p>
+        <a class="regbutton" href="$site_prefix/register" float=left>
+            <p>注册</p> 
+        </a>
+        <a class="loginbutton" href="#" onclick="formSubmit();" float=left>
+            <p>登录</p> 
+        </a>
+    </form>
+</div>
+</body>
+</html>

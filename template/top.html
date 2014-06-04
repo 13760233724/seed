@@ -1,0 +1,25 @@
+$def with (site_prefix, name)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Top</title>
+    <link rel="stylesheet" href="css/all.css" type="text/css" />
+    <link rel="stylesheet" href="css/top.css" type="text/css" />
+</head>
+
+<body>
+    <div id="top">
+        <a class="logo" href="#" id="fresh">
+            <img src="img/top_logo.png" />
+        </a>
+        <div id="top_right">
+            <div id="top_right_bottom">欢迎您，<span class="id">$name</span>
+                <a class="link" href=$site_prefix/logout target="_parent">[退出]</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+$def with(site_prefix, types, title)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>safety</title>
+<link rel="stylesheet" href="css/all.css" type="text/css"/>
+<style>
+.box {
+    width:640px;
+}
+.content {
+    height:120px;
+}
+.title {
+    width:640px;
+    height:30px;
+}
+.caption2 {
+    font:bold 15px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+    color:#2384bc;
+    line-height:25px;
+}
+#tab_1,#tab_2,#tab_3 {
+    display:block;
+    float:left;
+    text-align:center;
+    width:90px;
+    height:25px;
+    margin-top:5px;
+    margin-left:10px;
+}
+.aaa{
+    background-image:url(img/tab_back.gif);
+}
+</style>
+</head>
+
+<body>
+<script language="javascript">
+
+function formSubmit1()
+{
+  var oldpw=document.getElementById('productid').value;
+  if(oldpw==''){
+    alert('请填写产品唯一标识！');
+    return false;
+  }
+  var newpw=document.getElementById('productname').value;
+  if(newpw==''){
+    alert('请填写产品名称！');
+    return false;
+  }
+  document.getElementById("myForm1").submit();
+}
+</script>
+    <div class="box">
+        <div class="title">
+            <a id="tab_1" class="aaa" href="javascript:void(0)"><p class="caption2">添加产品信息</p></a>
+        </div>
+    <form name="myForm1" id="myForm1" action="$site_prefix/add" method="post" enctype="multipart/form-data">
+        <div class="content" id="tab_a1" onkeydown= "if(event.keyCode==13) formSubmit1();">
+            <table>
+                <tr>
+                    <td class="row1">产品唯一标识&nbsp;：</td>
+                    <td class="row2"><input id="productid" class="input" type="test" maxlength="" name="productid" />&nbsp;
+                </tr>
+                <tr>
+                    <td class="row1">产品名称&nbsp;：</td>
+                    <td class="row2"><input id="productname" class="input" type="test" maxlength="" name="productname" /></td>
+                </tr>
+                <tr>
+                    <td class="row1 lastrow">产品类型&nbsp;：</td>
+                    <td class="row2 lastrow">
+                        <span class="STYLE1">
+                            <select id ="producttype" name="producttype">
+                                $for each in types:
+                                    <option>$types[each][1]</option>
+                            </select>
+                    </td>
+                </tr>
+            </table>
+            <a class="button" href="#" onclick="formSubmit1();"/><p>确认添加</p></a>
+        </div>
+        </form>
+        <img src="img/bottom.gif" />
+</body>
+</html>

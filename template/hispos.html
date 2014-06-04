@@ -1,0 +1,162 @@
+$def with (site_prefix, devices, hispos)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+<!--
+html {
+    height:100%;
+}
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    height:100%;
+}
+
+.STYLE1 {
+    font-size: 12px
+}
+
+.STYLE3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.STYLE4 {
+    color: #03515d;
+    font-size: 12px;
+}
+img {
+   border: 0px; 
+}
+.STYLE5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+-->
+#container{height:100%} 
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=PkztGytCOmGprnY4cIlfamsm"></script>
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td height="30" background="$site_prefix/img/tab_05.gif">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="12" height="30"><img src="$site_prefix/img/tab_03.gif"
+                            width="12" height="30" />
+                        </td>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="46%" valign="middle">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="5%">
+                                                    <div align="center">
+                                                        <img src="$site_prefix/img/tb.gif" width="16" height="16" />
+                                                    </div></td>
+                                                <td width="95%" class="STYLE1"><span class="STYLE3">当前位置</span>：<a href="$site_prefix/view">[产品信息查看]</a>-[产品历史状态信息查看]</td>
+                                            </tr>
+                                        </table></td>
+                                    <td width="54%"><table border="0" align="right"
+                                            cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="60">
+                                                    <table width="87%" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                    </table></td>
+                                                <td width="60"><table width="90%" border="0"
+                                                        cellpadding="0" cellspacing="0">
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="16"><img src="$site_prefix/img/tab_07.gif" width="16"
+                            height="30" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><table width="100%" border="0" cellspacing="0"
+                    cellpadding="0">
+                    <tr>
+                        <td width="8" background="$site_prefix/img/tab_12.gif">&nbsp;</td>
+                        <td><table width="100%" border="0" cellpadding="0"
+                                cellspacing="1" bgcolor="b5d6e6" onmouseover="changeto()"
+                                onmouseout="changeback()">
+                                <tr>
+                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                        bgcolor="#FFFFFF"><div align="center">
+                                            <span class="STYLE1">产品唯一标识</span>
+                                        </div>
+                                    </td>
+                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                        bgcolor="#FFFFFF"><div align="center">
+                                            <span class="STYLE1">产品名称</span>
+                                        </div>
+                                    </td>
+                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                        bgcolor="#FFFFFF"><div align="center">
+                                            <span class="STYLE1">产品类型</span>
+                                        </div>
+                                    </td>
+                                    <td width="5%" height="22" background="$site_prefix/img/bg.gif"
+                                        bgcolor="#FFFFFF"><div align="center">
+                                            <span class="STYLE1">状态</span>
+                                        </div>
+                                    </td>    
+                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                        bgcolor="#FFFFFF"><div align="center">
+                                            <span class="STYLE1">上报时间</span>
+                                        </div>
+                                    </td>                                                                                                   
+                                </tr>
+                                $ num = 0
+                                $for everyone in hispos:
+                                    $ id = everyone[0]
+                                    <tr>
+                                        <td height="20" bgcolor="#FFFFFF"><div align="center"
+                                                class="STYLE1">
+                                                <div align="center">$devices[id][0]</div>
+                                            </div>
+                                        </td>
+                                        <td height="20" bgcolor="#FFFFFF"><div align="center">
+                                                <span class="STYLE1">$devices[id][1]</span>
+                                            </div>
+                                        </td>
+                                        <td height="20" bgcolor="#FFFFFF"><div align="center">
+                                                <span class="STYLE1">$devices[id][2]</span>
+                                            </div>
+                                        </td> 
+                                        <td height="20" bgcolor="#FFFFFF"><div align="center">
+                                                <span class="STYLE1">$hispos[num][2]</span>
+                                            </div>
+                                        </td> 
+                                        <td height="20" bgcolor="#FFFFFF"><div align="center">
+                                                <span class="STYLE1">$everyone[1]</span>
+                                            </div>
+                                        </td>                           
+                                    </tr>
+                                    $ num += 1
+                            </table>
+                        </td>
+                        <td width="8" background="$site_prefix/img/tab_15.gif">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
