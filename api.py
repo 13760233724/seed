@@ -15,10 +15,6 @@ class index:
             method = web.input().method
             if method == "getstatus":
                 return self.getstatus()
-            if method == "getproductinfo":
-                logger.info(str(web.input()))
-                productid = web.input().id
-                return self.getproductinfo(productid)
             else:
                 return "未提供的方法"
         except Exception, e:
@@ -35,7 +31,12 @@ class index:
             if method == "uploadinfo":
                 productid = int(web.input().id)
                 statusid = int(web.input().statusid)
-                return self.uploadinfo(productid, statusid)
+                brand = web.input().brand
+                return self.uploadinfo(productid, statusid, brand)
+            if method == "getproductinfo":
+                productid = web.input().id
+                brand = web.input().brand
+                return self.getproductinfo(productid, brand)
             else:
                 return "未提供的方法"
         except Exception, e:
@@ -45,10 +46,11 @@ class index:
     def getstatus(self):
         return json.dumps(getproductstatus())
 
-    def getproductinfo(self, productid):
+    def getproductinfo(self, productid, brand):
         result = {}
-        product = getDevices(productid)
-        if len(product) == 0:
+        realid = getRealId(productid, brand)
+        product = getDevices(realid)
+        if realid == -1:
             result["code"] = 0
             result["content"] = "未检索该产品的相关信息"
             return json.dumps(result)
@@ -56,7 +58,7 @@ class index:
         result["code"] = 1
         result["content"] = {}
 
-        product = product[int(productid)]
+        product = product[int(realid)]
         name = product[1]
         type = product[2]
         result["content"]["name"] = name
@@ -64,7 +66,7 @@ class index:
 
         db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
         cursor = db.cursor()
-        cmd = 'SELECT * FROM hispos WHERE deviceid = %s ORDER BY time DESC' % productid
+        cmd = 'SELECT * FROM hispos WHERE deviceid = %s ORDER BY time DESC' % realid
         cursor.execute(cmd)
         rows = cursor.fetchall()
         resultstr = ""
@@ -80,10 +82,11 @@ class index:
         db.close()
         return json.dumps(result)
 
-    def uploadinfo(self, productid, statusid):
+    def uploadinfo(self, productid, statusid, brand):
+        logger.info(productid, brand)
         result = {}
-        product = getDevices(productid)
-        if len(product) == 0:
+        realid = getRealId(productid, brand)
+        if realid == -1:
             result["code"] = 0
             result["content"] = "该产品不存在"
             return json.dumps(result)
@@ -93,12 +96,12 @@ class index:
         db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
         cursor = db.cursor()
         try:
-            cmd = "UPDATE devices SET pos='%s',lasttime ='%s' WHERE id='%s';" % (status, now, productid)
+            cmd = "UPDATE devices SET pos='%s',lasttime ='%s' WHERE id='%s';" % (status, now, realid)
             cursor.execute(cmd)
-            cmd = "INSERT INTO hispos (`deviceid`, `pos`, `time`) VALUES ('%s', '%s', '%s');" % (productid, status, now)
+            cmd = "INSERT INTO hispos (`deviceid`, `pos`, `time`, `seedid`, `brand`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (realid, status, now, productid, cleanString(brand))
             cursor.execute(cmd)
-        except:
-            pass
+        except Exception, e:
+            logger.info(e)
         db.close()
         result["code"] = 1
         result["content"] = "流转信息上传成功"

@@ -29,16 +29,16 @@ class add:
             return render.message(site_prefix, "未登录", "您尚未登录", "", "_parent", "登录界面")
         productid = web.input().productid
         productname = web.input().productname
-        producttype = web.input().producttype
+        brand = web.input().brand
 
         db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
         cursor = db.cursor()
 
-        cmd = "SELECT id FROM type WHERE name='%s';" % producttype
-        cursor.execute(cmd)
-        producttype = cursor.fetchone()[0]
+        #cmd = "SELECT id FROM type WHERE name='%s';" % producttype
+        #cursor.execute(cmd)
+        #producttype = cursor.fetchone()[0]
 
-        cmd = "SELECT * FROM devices WHERE id='%s';" % productid
+        cmd = "SELECT * FROM devices WHERE id='%s' and brand='%s';" % (productid, brand)
         cursor.execute(cmd)
         rows = cursor.fetchall()
 
@@ -48,10 +48,10 @@ class add:
 
         else:
             now = time.strftime("%Y-%m-%d %H:%M:%S")
-            cmd = "INSERT INTO devices (`id`, `name`, `type`, `pos`, `lasttime`) VALUES ('%s', '%s', '%d', '%s', '%s');" % (cleanString(productid), cleanString(productname), producttype, '产品信息创建', now)
+            cmd = "INSERT INTO devices (`seedid`, `name`, `brand`, `pos`, `lasttime`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (cleanString(productid), cleanString(productname), cleanString(brand), '产品信息创建', now)
             cursor.execute(cmd)
 
-            cmd = "INSERT INTO hispos (`deviceid`, `pos`, `time`) VALUES ('%s', '%s', '%s');" % (cleanString(productid), '产品信息创建', now)
+            cmd = "INSERT INTO hispos (`seedid`, `pos`, `time`, `brand`) VALUES ('%s', '%s', '%s', '%s');" % (cleanString(productid), '产品信息创建', now, cleanString(brand))
             cursor.execute(cmd)
             db.close()
         
@@ -85,33 +85,30 @@ class modify:
     def POST(self):
         if session.login != True:
             return render.message(site_prefix, "未登录", "您尚未登录", "", "_parent", "登录界面")
-        productid = web.input().productid
+        seedid = web.input().productid
         productname = web.input().productname
-        producttype = web.input().producttype   
+        brand = web.input().brand   
 
         db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
         cursor = db.cursor()
 
-        cmd = "SELECT id FROM type WHERE name='%s';" % producttype
+        #cmd = "SELECT id FROM type WHERE name='%s';" % producttype
+        #cursor.execute(cmd)
+        #producttype = cursor.fetchone()[0]             
+
+        #cmd = "SELECT * FROM devices WHERE id='%s' and brand='%s';" % (seedid, brand)
+        #cursor.execute(cmd)
+        #rows = cursor.fetchall()
+
+        #if productid != session.oldid and len(rows) != 0:
+        #    db.close()
+        #    return render.message(site_prefix, "修改失败", "产品唯一标识重复", "modify?id=" + str(session.oldid), "main", "重新修改")
+
+        #else:
+        #now = time.strftime("%Y-%m-%d %H:%M:%S")
+        cmd = "UPDATE devices SET seedid = '%s', name = '%s', brand = '%s' WHERE id = '%s'" % (seedid, productname, brand, session.oldid) 
         cursor.execute(cmd)
-        producttype = cursor.fetchone()[0]             
+        db.close()
+    
 
-        cmd = "SELECT * FROM devices WHERE id='%s';" % productid
-        cursor.execute(cmd)
-        rows = cursor.fetchall()
-
-        if productid != session.oldid and len(rows) != 0:
-            db.close()
-            return render.message(site_prefix, "修改失败", "产品唯一标识重复", "modify?id=" + str(session.oldid), "main", "重新修改")
-
-        else:
-            now = time.strftime("%Y-%m-%d %H:%M:%S")
-            if productid != session.oldid:
-                cmd = "UPDATE devices SET id = '%s', name = '%s', type = '%d' WHERE id = '%s'" % (productid, productname, producttype, session.oldid) 
-            else:
-                cmd = "UPDATE devices SET name = '%s', type = '%d' WHERE id = '%s'" % (productname, producttype, session.oldid)
-            cursor.execute(cmd)
-            db.close()
-        
-
-            return render.message(site_prefix, "修改成功", "产品信息修改成功", "manage", "main", "产品管理")   
+        return render.message(site_prefix, "修改成功", "产品信息修改成功", "manage", "main", "产品管理")   

@@ -62,7 +62,7 @@ function formSubmit1()
         <div class="content" id="tab_a1" onkeydown= "if(event.keyCode==13) formSubmit1();">
             <table>
                 <tr>
-                    <td class="row1">产品唯一标识&nbsp;：</td>
+                    <td class="row1">产品标识&nbsp;：</td>
                     <td class="row2"><input id="productid" class="input" type="test" maxlength="" name="productid" />&nbsp;
                 </tr>
                 <tr>
@@ -70,14 +70,8 @@ function formSubmit1()
                     <td class="row2"><input id="productname" class="input" type="test" maxlength="" name="productname" /></td>
                 </tr>
                 <tr>
-                    <td class="row1 lastrow">产品类型&nbsp;：</td>
-                    <td class="row2 lastrow">
-                        <span class="STYLE1">
-                            <select id ="producttype" name="producttype">
-                                $for each in types:
-                                    <option>$types[each][1]</option>
-                            </select>
-                    </td>
+                    <td class="row1 lastrow">品牌型号信息&nbsp;：</td>
+                    <td class="row2 lastrow"><input id="brand" class="input" type="test" maxlength="" name="brand" /></td>
                 </tr>
             </table>
             <a class="button" href="#" onclick="formSubmit1();"/><p>确认添加</p></a>

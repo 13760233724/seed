@@ -63,25 +63,16 @@ function formSubmit1()
             $for key in devices:
                 <table>
                     <tr>
-                        <td class="row1">产品唯一标识&nbsp;：</td>
-                        <td class="row2"><input id="productid" class="input" type="test" maxlength="" name="productid" value="$devices[key][0]" />&nbsp;
+                        <td class="row1">产品标识&nbsp;：</td>
+                        <td class="row2"><input id="productid" class="input" type="test" maxlength="" name="productid" value="$devices[key][10]" />&nbsp;
                     </tr>
                     <tr>
                         <td class="row1">产品名称&nbsp;：</td>
                         <td class="row2"><input id="productname" class="input" type="test" maxlength="" name="productname" value="$devices[key][1]"/></td>
                     </tr>
                     <tr>
-                        <td class="row1 lastrow">产品类型&nbsp;：</td>
-                        <td class="row2 lastrow">
-                            <span class="STYLE1">
-                                <select id ="producttype" name="producttype">
-                                    $for each in types:
-                                        $if types[each][1] == devices[key][2]:
-                                            <option selected="selected">$types[each][1]</option>
-                                        $else:
-                                            <option>$types[each][1]</option>
-                                </select>
-                        </td>
+                        <td class="row1 lastrow">品牌信息型号&nbsp;：</td>
+                        <td class="row2 lastrow"><input id="brand" class="input" type="test" maxlength="" name="brand" value="$devices[key][2]"/></td>
                     </tr>
                 </table>
             <a class="button" href="#" onclick="formSubmit1();"/><p>确认修改</p></a>

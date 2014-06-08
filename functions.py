@@ -19,6 +19,20 @@ def cleanString(data):
     data = data.encode('utf-8')
     return MySQLdb.escape_string(data)
 
+def getRealId(seedid, brand):
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    cursor = db.cursor()
+    cmd = "SELECT * FROM devices WHERE seedid = %s and brand = '%s'" % (seedid, brand)
+    cursor.execute(cmd)
+    result = cursor.fetchone()
+    try:
+        if len(result) != 0:
+            return result[0]
+        else:
+            return -1
+    except:
+        return -1
+
 def getHisPos(deviceid):
     db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
     cursor = db.cursor()
@@ -48,10 +62,7 @@ def getDevices(deviceid = -1):
         id = row[0]
         devicename = row[1]
 
-        typeid = row[2]
-        cmd = 'SELECT name FROM type WHERE id = %s;' % typeid
-        cursor.execute(cmd)
-        type = cursor.fetchone()[0]
+        brand = row[2]
 
         userid = row[3]
         userid = userid.split('|')
@@ -92,9 +103,11 @@ def getDevices(deviceid = -1):
 
         data = row[6]
         pos = row[7]
+
+        seedid = row[10]
         
 
-        onedevice = [id, devicename, type, users, bindusers, groups, status, lasttime, data, pos]
+        onedevice = [id, devicename, brand, users, bindusers, groups, status, lasttime, data, pos, seedid]
         devices[id] = onedevice
     
     db.close()

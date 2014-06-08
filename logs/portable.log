@@ -1011,3 +1011,72 @@
 2014-06-04 20:37:39,408 INFO IP: 121.49.97.26 USERNAME: test Logout.
 2014-06-04 20:40:02,719 INFO IP: 222.197.180.186 USER: yxx Login Successful.
 2014-06-04 20:40:38,666 INFO <Storage {'method': u'getproductinfo', 'id': u'1'}>
+2014-06-05 16:46:07,748 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 16:52:00,723 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 16:53:50,572 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 17:00:30,591 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 17:02:10,078 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 18:43:57,985 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 18:46:57,650 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 18:47:32,483 INFO 'utf8' codec can't decode byte 0xc4 in position 0: invalid continuation byte
+2014-06-05 18:48:22,855 INFO 'utf8' codec can't decode byte 0xc4 in position 0: invalid continuation byte
+2014-06-05 18:48:32,140 INFO 'utf8' codec can't decode byte 0xc4 in position 0: invalid continuation byte
+2014-06-05 18:51:26,842 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 18:51:56,523 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-05 18:52:29,194 INFO 'utf8' codec can't decode byte 0xc4 in position 0: invalid continuation byte
+2014-06-08 18:49:43,222 INFO IP: 121.49.97.26 USER: test Login Successful.
+2014-06-08 19:54:24,922 INFO IP: 121.49.97.26 USER: test Login Successful.
+2014-06-08 20:24:54,488 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:24:56,124 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:24:57,621 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:24:59,122 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:25:01,984 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:25:46,434 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:25:47,826 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:26:12,924 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:26:14,361 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:26:20,152 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:26:21,605 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:26:28,398 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:27:18,222 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:27:19,695 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:27:21,103 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:27:22,787 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:28:05,430 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:28:08,408 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:28:10,028 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:28:11,476 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:28:15,624 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:29:45,251 INFO TESTTEST
+2014-06-08 20:29:45,252 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:29:52,374 INFO TESTTEST
+2014-06-08 20:29:52,374 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:29:58,783 INFO TESTTEST
+2014-06-08 20:29:58,783 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:31:34,542 INFO TESTTEST
+2014-06-08 20:31:34,543 INFO TESTTEST
+2014-06-08 20:31:34,545 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-08 20:31:58,339 INFO TESTTEST
+2014-06-08 20:31:58,340 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:32:58,024 INFO TESTTEST
+2014-06-08 20:32:58,025 INFO 'utf8' codec can't decode byte 0xbf in position 0: invalid start byte
+2014-06-08 20:33:53,946 INFO TESTTEST
+2014-06-08 20:34:59,952 INFO TESTTEST
+2014-06-08 20:34:59,955 INFO IP: 222.197.180.186 USER: test Login Successful.
+2014-06-08 20:35:18,006 INFO TESTTEST
+2014-06-08 20:35:18,038 INFO global name 'deviceid' is not defined
+2014-06-08 20:37:51,997 INFO object of type 'NoneType' has no len()
+2014-06-08 20:38:45,513 INFO SELECT * FROM devices WHERE id = '10086' and brand = 'test'
+2014-06-08 20:38:45,514 INFO object of type 'NoneType' has no len()
+2014-06-08 20:39:05,379 INFO SELECT * FROM devices WHERE id = 10086 and brand = 'test'
+2014-06-08 20:39:05,380 INFO object of type 'NoneType' has no len()
+2014-06-08 20:39:26,295 INFO SELECT * FROM devices WHERE id = 10086 and brand = 'test'
+2014-06-08 20:39:26,296 INFO object of type 'NoneType' has no len()
+2014-06-08 20:40:02,558 INFO SELECT * FROM devices WHERE seedid = 10086 and brand = 'test'
+2014-06-08 20:41:06,631 INFO global name 'NoneType' is not defined
+2014-06-08 20:46:29,738 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-08 20:49:38,389 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-08 20:50:02,033 INFO IP: 222.197.180.186 USER: yxx Login Successful.
+2014-06-08 20:51:39,638 INFO IP: 222.197.180.186 USER: test Login Successful.
+2014-06-08 20:53:15,000 INFO 'ascii' codec can't decode byte 0xe4 in position 80: ordinal not in range(128)
+2014-06-08 20:55:01,824 INFO IP: 222.197.180.186 USER: test Login Successful.
