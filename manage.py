@@ -38,7 +38,7 @@ class add:
         #cursor.execute(cmd)
         #producttype = cursor.fetchone()[0]
 
-        cmd = "SELECT * FROM devices WHERE id='%s' and brand='%s';" % (productid, brand)
+        cmd = "SELECT * FROM devices WHERE seedid='%s' and brand='%s';" % (productid, brand)
         cursor.execute(cmd)
         rows = cursor.fetchall()
 
@@ -51,7 +51,11 @@ class add:
             cmd = "INSERT INTO devices (`seedid`, `name`, `brand`, `pos`, `lasttime`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (cleanString(productid), cleanString(productname), cleanString(brand), '产品信息创建', now)
             cursor.execute(cmd)
 
-            cmd = "INSERT INTO hispos (`seedid`, `pos`, `time`, `brand`) VALUES ('%s', '%s', '%s', '%s');" % (cleanString(productid), '产品信息创建', now, cleanString(brand))
+            cmd = "SELECT * FROM devices WHERE brand = '%s' and seedid = '%s'" % (cleanString(brand), cleanString(productid))
+            cursor.execute(cmd)
+            row = cursor.fetchone()
+            realid = row[0]
+            cmd = "INSERT INTO hispos (`deviceid`, `seedid`, `pos`, `time`, `brand`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (realid, cleanString(productid), '产品信息创建', now, cleanString(brand))
             cursor.execute(cmd)
             db.close()
         
