@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background:url(../img/bg.jpg) repeat;
+}
+.login {
+	background:url(../img/cloud.jpg) no-repeat center;
+	width:960px;
+	height:500px;
+	margin:40px auto 0 auto;
+	position:relative;
+}
+.content2 {
+	margin-bottom:10px;
+}
+.point2 {
+	font:bold 13px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+	color:#27637a;
+}
+.link2 {
+	font:bold 13px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+.link2:hover {
+	text-decoration:underline;
+}
+.loginbutton {
+	display:block;
+	width:81px;
+	height:31px;
+	background-image:url(../img/button2.png);
+	float:left;
+	margin-top:10px;
+	margin-left:30px;
+}
+.loginbutton p {
+	font:bold 14px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+	color:#ccc;
+	line-height:31px;
+	text-align:center;
+	margin:0;
+}
+.loginbutton:hover p {
+	color:#FFF;
+}
+.loginbutton:active {
+    margin-top:11px;
+    margin-left:31px;
+}
+.regbutton {
+	display:block;
+	width:81px;
+	height:31px;
+	background-image:url(../img/button2.png);
+	float:left;
+	margin-top:10px;
+	margin-left:383.5px;
+}
+.regbutton p {
+	font:bold 14px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+	color:#ccc;
+	line-height:31px;
+	text-align:center;
+	margin:0;
+}
+.regbutton:hover p {
+	color:#FFF;
+}
+.regbutton:active {
+    margin-top:11px;
+    margin-left:384.5px;
+}
+.input2 {
+	font:normal 15px "微软雅黑","宋体",Verdana, Geneva, sans-serif;
+    float:left;
+    width:166px;
+    border:0px;
+    padding:9px 0;
+    height:19px;
+}

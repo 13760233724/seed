@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #005eac;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+	display: block;
+}
+/* End hide from IE Mac */
+body {
+	font-size: 12px;
+	font-family:"微软雅黑", "宋体", Verdana, Geneva, sans-serif;
+	color: #333;
+}
+.container {
+	width: 450px;
+}
+.header {
+	background-color: #3777bc;
+	overflow: hidden;
+}
+.header .logo {
+	float: left;
+}
+.header .logo img {
+	display: block;
+}
+.header h2 {
+	height: 26px;
+	line-height: 26px;
+	font-size: 14px;
+	color: #fff;
+	float: left;
+	margin-left: 6px;
+}
+.header .close {
+	color: #fff;
+	float: right;
+	margin: 7px 11px 0 0;
+}
+.container .wrapper {
+	border-width: 0 1px 1px;
+	border-color: #555;
+	border-style: solid;
+	zoom: 1;
+}
+.wrapper .top {
+	background-color: #f4f9fe;
+	padding: 10px 0 10px 30px;
+}
+.wrapper .top .avatar {
+	border: 1px solid #a8c2db;
+	margin-right: 10px;
+	float: left;
+}
+.wrapper .top p {
+	float: left;
+	margin-top: 10px;
+}
+.wrapper .content {
+	background: #eff6fc url(../img/bg_1.gif) repeat-x;
+}
+.content .outer-wrapper {
+	background: url(../img/bg_2.gif) repeat-x left bottom;
+	padding: 30px 20px 30px 30px;
+}
+.content .inner-wrapper {
+	background: url(../img/arrow.png) no-repeat 265px center;
+	position: relative;
+	min-height: 120px;
+	_height: 120px;
+}
+.functions li {
+	margin-bottom: 20px;
+}
+.functions li.last {
+	margin-bottom: 0;
+}
+.functions img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.functions a {
+	margin-left: 10px;
+}
+.content .inner-wrapper .website {
+	width: 97px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -50px;
+}
+.website .icon {
+	width: 75px;
+	display: block;
+	border: 1px solid #a9c3dc;
+	margin: 0 auto 10px;
+}
+.footer {
+	background-color: #f0f5f8;
+	padding: 12px 30px;
+}
+.footer p {
+	float: left;
+	margin-top: 5px;
+}
+.footer a.connect {
+	width: 60px;
+	height: 28px;
+	line-height: 26px;
+ *line-height: 28px;
+	_line-height: 26px;
+	background: url(../img/btn_connect.png) no-repeat;
+	color: #fff;
+	text-align: center;
+	float: right;
+}
+.footer a.connect:hover {
+	text-decoration: none;
+}
+.login {
+	width: 570px;
+	margin: 0 auto;
+}
+.login .header h2 {
+	height: 35px;
+	height: 35px;
+	line-height: 35px;
+}
+.login .content {
+	border-width: 0 1px 1px;
+	border-style: solid;
+	border-color: #cee1ee;
+}
+.login .left {
+	width: 277px;
+	padding: 60px 20px;
+	background: #f3faff url(../img/bg_3.jpg) repeat-x left bottom;
+	border-right: 1px solid #e3eef8;
+	float: left;
+}
+.login .right {
+	width: 250px;
+	float: right;
+}
+.login p.text {
+	text-align: center;
+	line-height: 18px;
+	margin-bottom: 30px;
+}
+.login .left form {
+	padding-left: 40px;
+}
+.login .item {
+	margin-bottom: 18px;
+}
+.login .item_3 {
+	padding-left: 40px;
+}
+.login .item .button {
+	margin-left: 5px;
+}
+.login .textbox {
+	width: 150px;
+	height: 20px;
+	padding: 0 4px;
+	line-height: 20px;
+	border: 1px solid #bdc7d8;
+}
+.login labe, .login input {
+	vertical-align: middle;
+}
+.login label {
+	cursor: pointer;
+}
+.login .right .banner {
+	display: block;
+	margin-bottom: 14px;
+}
+.login .register {
+	width: 82px;
+	height: 27px;
+	background:url(../img/btn_register.gif) no-repeat;
+	display: inline-block;
+	_padding-bottom: 1px;
+}
+.login .right p {
+	text-align: center;
+}
+.login .right p a {
+	vertical-align: middle;
+}
+.tip {
+	width: 210px;
+	background-color: #fffacd;
+	border: 1px solid #f2cbb2;
+	padding: 8px 10px;
+	text-align: center;
+	margin: 0 auto 20px;
+}
+.tip2 {
+	position: relative;
+	left: -5px;
+}
+.title {
+	background: #3777BC url(../img/conncet-top-line.gif);
+	border: medium none;
+	height: 26px;
+	color: white;
+	float: none !important;
+	font-size: 14px;
+	font-weight: 700;
+}
+.title img {
+	padding:1px 0 0 1px;
+	width:94px;
+}
+.title a:hover {
+	text-decoration:none;
+}
+#xn_dialog_cancel_button {
+	float:right;
+	font-size:12px;
+	font-weight:normal;
+	color:#fff;
+	padding:5px;
+}
+.button {
+	width:78px;
+	height:27px;
+	background-image:url(../img/button.png);
+	border-width:0;
+	cursor: pointer;
+}
+.button {
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+}
+.button:hover {
+	background-image:url(../img/button_hover.png);
+}
+.button:active {
+	background-image:url(../img/button_active.png);
+}

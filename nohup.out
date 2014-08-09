@@ -1,0 +1,70 @@
+121.49.97.4:52331 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /seed/" - 200 OK
+121.49.97.4:52331 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /seed/mktop" - 200 OK
+121.49.97.4:52332 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /seed/mkmenu" - 200 OK
+121.49.97.4:52331 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /static/css/top.css" - 304 Not Modified121.49.97.4:52332 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /static/css/all.css" - 304 Not Modified
+
+121.49.97.4:52331 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /static/img/top_logo.png" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:12] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52333 - - [09/Aug/2014 21:04:13] "HTTP/1.1 GET /static/css/menu.css" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:13] "HTTP/1.1 GET /static/css/welcome.css" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:13] "HTTP/1.1 GET /static/img/admin_p.gif" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:13] "HTTP/1.1 GET /static/img/shadow_bg.jpg" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:13] "HTTP/1.1 GET /static/img/title_bg2.jpg" - 304 Not Modified
+121.49.97.4:52333 - - [09/Aug/2014 21:04:14] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52344 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /seed/" - 200 OK
+121.49.97.4:52344 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /seed/mktop" - 200 OK
+121.49.97.4:52345 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /seed/mkmenu" - 200 OK
+121.49.97.4:52345 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/css/all.css" - 304 Not Modified121.49.97.4:52344 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/css/top.css" - 304 Not Modified
+
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/img/top_logo.png" - 304 Not Modified
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/css/menu.css" - 304 Not Modified
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/css/welcome.css" - 304 Not Modified
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/img/admin_p.gif" - 304 Not Modified
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/img/shadow_bg.jpg" - 304 Not Modified
+121.49.97.4:52346 - - [09/Aug/2014 21:06:53] "HTTP/1.1 GET /static/img/title_bg2.jpg" - 304 Not Modified
+121.49.97.4:52359 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /seed/" - 200 OK
+121.49.97.4:52359 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /seed/mktop" - 200 OK
+121.49.97.4:52360 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /seed/mkmenu" - 200 OK
+121.49.97.4:52360 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/css/all.css" - 304 Not Modified
+ 121.49.97.4:52362 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/img/top_logo.png" - 304 Not Modified121.49.97.4:52359 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/css/top.css" - 304 Not Modified
+
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/css/menu.css" - 304 Not Modified
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/css/welcome.css" - 304 Not Modified
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/img/admin_p.gif" - 304 Not Modified
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/img/shadow_bg.jpg" - 304 Not Modified
+121.49.97.4:52361 - - [09/Aug/2014 21:07:01] "HTTP/1.1 GET /static/img/title_bg2.jpg" - 304 Not Modified
+121.49.97.4:52366 - - [09/Aug/2014 21:07:29] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:30] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:30] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:31] "HTTP/1.1 GET /seed/changepasswd" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:31] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:32] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:34] "HTTP/1.1 GET /seed/viewhispos" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:37] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52366 - - [09/Aug/2014 21:07:37] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52567 - - [09/Aug/2014 21:08:14] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52968 - - [09/Aug/2014 21:09:58] "HTTP/1.1 GET /seed/" - 200 OK
+121.49.97.4:52969 - - [09/Aug/2014 21:09:58] "HTTP/1.1 GET /seed/mkmenu" - 200 OK121.49.97.4:52968 - - [09/Aug/2014 21:09:58] "HTTP/1.1 GET /seed/mktop" - 200 OK
+
+121.49.97.4:52971 - - [09/Aug/2014 21:09:58] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:01] "HTTP/1.1 GET /seed/changepasswd" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:02] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:03] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:07] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:07] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:08] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:16] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:17] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:19] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:20] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:27] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:33] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:33] "HTTP/1.1 GET /seed/changepasswd" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:34] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:35] "HTTP/1.1 GET /seed/welcome" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:36] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:36] "HTTP/1.1 GET /seed/manage" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:37] "HTTP/1.1 GET /seed/view" - 200 OK
+121.49.97.4:52971 - - [09/Aug/2014 21:10:37] "HTTP/1.1 GET /seed/welcome" - 200 OK
