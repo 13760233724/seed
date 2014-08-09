@@ -16,6 +16,11 @@ class view:
         devices = getDevices();
         return render.view(site_prefix, devices)
 
+class directview:
+    def GET(self):
+        devices = getDevices();
+        return render.view(site_prefix, devices)
+
 class viewpos:
     def GET(self):
         if session.login != True:

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import web
 from config import *
+import os
 
 app = web.application(urls, globals())
 db = web.database(dbn = 'mysql', db = DB_NAME, user = DB_USER, pw = DB_PASSWORD)
@@ -13,5 +14,9 @@ def session_hook():
 
 app.add_processor(web.loadhook(session_hook))
 
+PIDFILE = "/home/www/seed/seed.pid"
 if __name__ == "__main__":
+    pidfile = open(PIDFILE, "w")
+    pidfile.write(str(os.getpid()))
+    pidfile.close()
     app.run()

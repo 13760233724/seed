@@ -4,7 +4,7 @@ $def with(site_prefix, title, message, redirect_url, target, redirect_title, cen
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>$title</title>
-<link rel="stylesheet" href="css/all.css" type="text/css"/>
+<link rel="stylesheet" href="/static/css/all.css" type="text/css"/>
 <style>
 .box {
 	width:640px;
@@ -29,14 +29,14 @@ $def with(site_prefix, title, message, redirect_url, target, redirect_title, cen
                 </tr>
                 <tr>
                     <td class="td1 lastrow" style="text-align:center;">
-                                                <img src="img/loading.gif" style="vertical-align:middle;margin-right:5px;"/>
+                                                <img src="/static/img/loading.gif" style="vertical-align:middle;margin-right:5px;"/>
                         <span><font color="ff0000" id="second">3</font>秒后将自动跳转至</span>
                                                 <a class="link" href="$site_prefix/$redirect_url" target="$target" >$redirect_title</a></td>
                                         </tr>
             </table>
         </div>
         <!--<a class="button" href="#" onclick=";"><p>返&nbsp;回</p></a>-->
-    <img src="img/bottom.gif" />
+    <img src="/static/img/bottom.gif" />
    </div>
 </body>
 <script type="text/javascript">

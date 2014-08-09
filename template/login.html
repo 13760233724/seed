@@ -4,7 +4,7 @@ $def with (site_prefix, title)
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>$title</title>
-<link href="$site_prefix/css/log_in.css" rel="stylesheet" type="text/css" />
+<link href="/static/css/log_in.css" rel="stylesheet" type="text/css" />
 </head>
 
 <script type="text/javascript">
@@ -55,15 +55,15 @@ position_fixed(document.getElementById("ie6-warning"),0, 0);
 
 <div id="login" class="login">
     <form id="myForm1" name="myForm1" method="post" action=$site_prefix/login>
-        <img src="$site_prefix/img/top_logo.png" style="margin-left:121px;margin-top:60px;margin-bottom:40px;"/>
+        <img src="/static/img/top_logo.png" style="margin-left:121px;margin-top:60px;margin-bottom:40px;"/>
         <div style="margin-bottom:50px;margin-left:378px">
-            <img src="$site_prefix/img/user1.gif" style="float:left;" />
-            <input class="input2" type="text" style="background:url($site_prefix/img/user.gif) no-repeat;" id="username" name="username" tabindex="1" />
+            <img src="/static/img/user1.gif" style="float:left;" />
+            <input class="input2" type="text" style="background:url(/static/img/user.gif) no-repeat;" id="username" name="username" tabindex="1" />
         </div>
         <p class="point2" style="margin-left:378px;margin-bottom:30px;">请输入用户名</a></p>
         <div style="margin-bottom:80px;margin-left:378px">
-            <img src="$site_prefix/img/password1.gif" style="float:left;" />
-            <input class="input2" type="password" style="background:url($site_prefix/img/user.gif) no-repeat;" id="pwd" name="pwd" tabindex="2" />
+            <img src="/static/img/password1.gif" style="float:left;" />
+            <input class="input2" type="password" style="background:url(/static/img/user.gif) no-repeat;" id="pwd" name="pwd" tabindex="2" />
         </div>
         <p class="point2" style="margin-left:378px;margin-bottom:30px;">请输入密码</a></p>
         <a class="regbutton" href="$site_prefix/register" float=left>

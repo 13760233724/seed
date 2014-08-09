@@ -4,8 +4,8 @@ import web
 import logging
 
 site_prefix = "/seed"
+wwwpath = "/home/www/seed/"
 site_title = "中国电信种联网溯源套件综合业务平台"
-
 DB_HOST =       "localhost"
 DB_NAME =       "product"
 DB_USER =       "product"
@@ -37,6 +37,8 @@ urls = (
     site_prefix + '/delete',          'manage.delete',
     site_prefix + '/modify',          'manage.modify',
     site_prefix + '/api',             'api.index',
+    site_prefix + '/zlwview',         'view.directview',
+    site_prefix + '/zlw',             'login.noverify',
 )
 
 logfile = "logs/portable.log"

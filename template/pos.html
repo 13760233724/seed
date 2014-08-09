@@ -44,10 +44,10 @@ img {
 <body>
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <td height="30" background="$site_prefix/img/tab_05.gif">
+            <td height="30" background="/static/img/tab_05.gif">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td width="12" height="30"><img src="$site_prefix/img/tab_03.gif"
+                        <td width="12" height="30"><img src="/static/img/tab_03.gif"
                             width="12" height="30" />
                         </td>
                         <td>
@@ -58,7 +58,7 @@ img {
                                             <tr>
                                                 <td width="5%">
                                                     <div align="center">
-                                                        <img src="$site_prefix/img/tb.gif" width="16" height="16" />
+                                                        <img src="/static/img/tb.gif" width="16" height="16" />
                                                     </div></td>
                                                 <td width="95%" class="STYLE1"><span class="STYLE3">当前位置</span>：<a href="$site_prefix/view">[终端状态查看]</a>-[终端地理信息查看]</td>
                                             </tr>
@@ -81,7 +81,7 @@ img {
                                 </tr>
                             </table>
                         </td>
-                        <td width="16"><img src="$site_prefix/img/tab_07.gif" width="16"
+                        <td width="16"><img src="/static/img/tab_07.gif" width="16"
                             height="30" />
                         </td>
                     </tr>
@@ -92,57 +92,57 @@ img {
             <td><table width="100%" border="0" cellspacing="0"
                     cellpadding="0">
                     <tr>
-                        <td width="8" background="$site_prefix/img/tab_12.gif">&nbsp;</td>
+                        <td width="8" background="/static/img/tab_12.gif">&nbsp;</td>
                         <td><table width="100%" border="0" cellpadding="0"
                                 cellspacing="1" bgcolor="b5d6e6" onmouseover="changeto()"
                                 onmouseout="changeback()">
                                 <tr>
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">终端唯一标识</span>
                                         </div>
                                     </td>
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">终端名称</span>
                                         </div>
                                     </td>
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">终端类型</span>
                                         </div>
                                     </td>
-                                    <td width="10%" background="$site_prefix/img/bg.gif" bgcolor="#FFFFFF"><div
+                                    <td width="10%" background="/static/img/bg.gif" bgcolor="#FFFFFF"><div
                                             align="center">
                                             <span class="STYLE1">终端使用人</span>
                                         </div>
                                     </td>
-                                    <td width="10%" background="$site_prefix/img/bg.gif" bgcolor="#FFFFFF"><div
+                                    <td width="10%" background="/static/img/bg.gif" bgcolor="#FFFFFF"><div
                                             align="center">
                                             <span class="STYLE1">终端绑定用户</span>
                                         </div>
                                     </td>      
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">终端所属群组</span>
                                         </div>
                                     </td>   
-                                    <td width="5%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="5%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">状态</span>
                                         </div>
                                     </td>    
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">最后更新时间</span>
                                         </div>
                                     </td>
-                                    <td width="20%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="20%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">终端地理位置</span>
                                         </div>
                                     </td>    
-                                    <td width="10%" height="22" background="$site_prefix/img/bg.gif"
+                                    <td width="10%" height="22" background="/static/img/bg.gif"
                                         bgcolor="#FFFFFF"><div align="center">
                                             <span class="STYLE1">操作</span>
                                         </div>
@@ -212,7 +212,7 @@ img {
                                     </tr>
                             </table>
                         </td>
-                        <td width="8" background="$site_prefix/img/tab_15.gif">&nbsp;</td>
+                        <td width="8" background="/static/img/tab_15.gif">&nbsp;</td>
                     </tr>
                 </table>
             </td>
@@ -237,7 +237,7 @@ $if len(devices) != 0:
         }
         $for key in devices:         
             var point = new BMap.Point($devices[key][9]);  // 创建点坐标
-            var myIcon = new BMap.Icon("$site_prefix/img/marker.png", new BMap.Size(48, 48), {    
+            var myIcon = new BMap.Icon("/static/img/marker.png", new BMap.Size(48, 48), {    
                 anchor: new BMap.Size(24, 48),  
                 infoWindowAnchor: new BMap.Size(24, 0)   
             });    

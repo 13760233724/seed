@@ -35,3 +35,9 @@ class login:
             
         logger.info("IP: %s USER: %s Login Failed." % (session.ip, username))
         return render.message(site_prefix, "登录失败", "用户名或密码错误", "", "_parent", "登录界面", 1)
+
+class noverify:
+    def GET(self):
+        session.login = True
+        session.username = "zlw"
+        return render.index(site_prefix, site_title) 
