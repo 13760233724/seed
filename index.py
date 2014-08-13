@@ -14,7 +14,7 @@ def session_hook():
 
 app.add_processor(web.loadhook(session_hook))
 
-PIDFILE = "/home/www/seed/seed.pid"
+PIDFILE = "/home/runner/seed/seed.pid"
 if __name__ == "__main__":
     pidfile = open(PIDFILE, "w")
     pidfile.write(str(os.getpid()))

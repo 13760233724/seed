@@ -20,7 +20,7 @@ class Register():
         name = web.input().name
         crypted = PasswordManager().encrypt_server_password(password)
         
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = "SELECT username FROM user WHERE username='%s';" % username
         cursor.execute(cmd)
@@ -42,7 +42,7 @@ class Register():
             logger.info("IP: %s USER: %s Login Successful." % (session.ip, username))
 
             now = time.strftime("%Y-%m-%d %H:%M:%S")
-            db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+            db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
             cursor = db.cursor()
             cmd = "UPDATE user SET lasttime ='%s' WHERE username='%s';" % (now, username)
             cursor.execute(cmd)

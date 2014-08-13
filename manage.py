@@ -31,7 +31,7 @@ class add:
         productname = web.input().productname
         brand = web.input().brand
 
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
 
         #cmd = "SELECT id FROM type WHERE name='%s';" % producttype
@@ -66,7 +66,7 @@ class delete:
         if session.login != True:
             return render.message(site_prefix, "未登录", "您尚未登录", "", "_parent", "登录界面")
         id = web.input().id
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = "DELETE FROM devices WHERE id='%s';" % id
         cursor.execute(cmd)
@@ -93,7 +93,7 @@ class modify:
         productname = web.input().productname
         brand = web.input().brand   
 
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
 
         #cmd = "SELECT id FROM type WHERE name='%s';" % producttype

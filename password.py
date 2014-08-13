@@ -30,7 +30,7 @@ class PasswordManager():
         return salt + result
     
     def checkPassword(self, username, passwd):
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = 'SELECT password FROM user WHERE username="%s";' % cleanString(username)
         cursor.execute(cmd)
@@ -67,7 +67,7 @@ class ChangePasswd():
             return render.message(site_prefix, "密码修改失败", "原密码错误", "passwd", "main", "修改密码")
 
     def updateNewPasswd(self, newpasswd, username):
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = 'UPDATE user SET password="%s"  WHERE username="%s";' % (cleanString(newpasswd), cleanString(username))
         cursor.execute(cmd)

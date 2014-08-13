@@ -5,7 +5,7 @@ from config import *
 from logger import *
 
 def getTruename(username):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     cmd = 'SELECT name FROM user WHERE username="%s";' % username
     cursor.execute(cmd)
@@ -20,7 +20,7 @@ def cleanString(data):
     return MySQLdb.escape_string(data)
 
 def getRealId(seedid, brand):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     cmd = "SELECT * FROM devices WHERE seedid = %s and brand = '%s'" % (seedid, brand)
     cursor.execute(cmd)
@@ -34,7 +34,7 @@ def getRealId(seedid, brand):
         return -1
 
 def getHisPos(deviceid):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     cmd = 'SELECT * FROM hispos WHERE deviceid = %s ORDER BY time DESC' % deviceid
     cursor.execute(cmd)
@@ -49,7 +49,7 @@ def getHisPos(deviceid):
     return hispos
 
 def getDevices(deviceid = -1):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     if deviceid == -1:
         cmd = 'SELECT * FROM devices;'
@@ -115,7 +115,7 @@ def getDevices(deviceid = -1):
 
 
 def getType(typeid = -1):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     if typeid == -1:
         cmd = 'SELECT * FROM type;'
@@ -135,7 +135,7 @@ def getType(typeid = -1):
     return types
 
 def getproductstatus(statusid = -1):
-    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+    db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
     cursor = db.cursor()
     if statusid == -1:
         cmd = 'SELECT * FROM status;'

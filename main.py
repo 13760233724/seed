@@ -20,9 +20,9 @@ class MakeMenu:
         return render.menu(site_prefix, menus)
 
     def getFunctions(self):
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
-        cmd = 'SELECT * FROM functions'
+        cmd = 'SELECT * FROM functions;'
         cursor.execute(cmd)
         rows = cursor.fetchall()
         result = []
@@ -41,7 +41,7 @@ class welcome:
         username = session.username
         name = getTruename(session.username)
         now = time.strftime("%Y-%m-%d %H:%M:%S")
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = 'SELECT registertime,lasttime FROM user WHERE username="%s";' % username
         cursor.execute(cmd)

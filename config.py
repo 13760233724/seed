@@ -4,7 +4,7 @@ import web
 import logging
 
 site_prefix = "/seed"
-wwwpath = "/home/www/seed/"
+wwwpath = "/home/runner/seed/"
 site_title = "中国电信种联网溯源套件综合业务平台"
 DB_HOST =       "localhost"
 DB_NAME =       "product"

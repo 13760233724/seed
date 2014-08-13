@@ -64,7 +64,7 @@ class index:
         result["content"]["name"] = name
         result["content"]["type"] = type
 
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         cmd = 'SELECT * FROM hispos WHERE deviceid = %s ORDER BY time DESC' % realid
         cursor.execute(cmd)
@@ -75,7 +75,7 @@ class index:
             postime = row[3]
             resultstr += str(postime)
             resultstr += "\n"
-            resultstr += str(pos)
+            resultstr += pos
             resultstr += "\n"
 
         result["content"]["info"] = resultstr
@@ -91,9 +91,9 @@ class index:
             result["content"] = "该产品不存在"
             return json.dumps(result)
         status = getproductstatus(statusid)
-        status = str(status[statusid])
+        status = status[statusid]
         now = time.strftime("%Y-%m-%d %H:%M:%S")
-        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+        db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
         try:
             cmd = "UPDATE devices SET pos='%s',lasttime ='%s' WHERE id='%s';" % (status, now, realid)
@@ -113,7 +113,7 @@ class index:
             if PasswordManager().checkPassword(username, password):
                 logger.info("IP: %s USER: %s Login Successful." % (session.ip, username))
                 now = time.strftime("%Y-%m-%d %H:%M:%S")
-                db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME)
+                db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
                 cursor = db.cursor()
                 cmd = "UPDATE user SET lasttime ='%s' WHERE username='%s';" % (now, username)
                 cursor.execute(cmd)
