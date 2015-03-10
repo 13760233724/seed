@@ -13,7 +13,10 @@ $def with (site_prefix, menus)
     <div id="menu">
         <ul>
             $for each in menus:
-            <li><a href="$site_prefix/$each['url']" target="main">$each['name']</a></li>
+                $if each['id'] in [6, 7]:
+            	    <li><a href="$site_prefix/$each['url']" target="_parent">$each['name']</a></li>
+                $else:
+            	    <li><a href="$site_prefix/$each['url']" target="main">$each['name']</a></li>
         </ul>
     </div>
 </body>

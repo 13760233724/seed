@@ -30,6 +30,7 @@ class MakeMenu:
             return result
         for each in rows:
             everyone = {}
+            everyone['id'] = each[0]
             everyone['name'] = each[1]
             everyone['url'] = each[2]
             result.append(everyone)

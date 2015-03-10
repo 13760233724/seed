@@ -83,7 +83,6 @@ class index:
         return json.dumps(result)
 
     def uploadinfo(self, productid, statusid, brand):
-        logger.info(productid, brand)
         result = {}
         realid = getRealId(productid, brand)
         if realid == -1:
@@ -95,10 +94,11 @@ class index:
         now = time.strftime("%Y-%m-%d %H:%M:%S")
         db = MySQLdb.connect(host = DB_HOST, user = DB_USER, passwd = DB_PASSWORD, db = DB_NAME, charset='utf8')
         cursor = db.cursor()
+        
         try:
             cmd = "UPDATE devices SET pos='%s',lasttime ='%s' WHERE id='%s';" % (status, now, realid)
             cursor.execute(cmd)
-            cmd = "INSERT INTO hispos (`deviceid`, `pos`, `time`, `seedid`, `brand`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (realid, status, now, productid, cleanString(brand))
+            cmd = "INSERT INTO hispos (`deviceid`, `pos`, `time`, `seedid`, `brand`) VALUES ('%s', '%s', '%s', '%s', '%s');" % (realid, status, now, productid, brand)
             cursor.execute(cmd)
         except Exception, e:
             logger.info(e)
